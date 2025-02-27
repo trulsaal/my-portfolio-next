@@ -15,7 +15,26 @@ export async function getProjects(): Promise<Project[]> {
     "slug": slug.current,
     "image": image.asset->url,
     url,
-    content
+    content,
+    list
+  
+    }`
+  );
+}
+export async function getProfileImage() {
+  const client = createClient({
+    projectId: "nwd501sj",
+    dataset: "production",
+    apiVersion: "2025-02-19",
+  });
+  return client.fetch(
+    groq`*[_type == "profileImage"]{
+    _id,
+    _createdAt,
+    name,
+    "slug": slug.current,
+    "image": image.asset->url
+  
   
     }`
   );
@@ -35,7 +54,8 @@ export async function getProject(slug: string): Promise<Project> {
     "slug": slug.current,
     "image": image.asset->url,
     url,
-    content
+    content,
+    list
   
     }`,
     { slug }
