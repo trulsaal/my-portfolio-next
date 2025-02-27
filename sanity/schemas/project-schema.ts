@@ -23,6 +23,12 @@ const project = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "list",
+      title: "List of tools",
+      type: "array",
+      of: [{ type: "string" }],
+    },
   ],
 };
 
