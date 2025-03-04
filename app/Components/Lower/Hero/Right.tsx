@@ -1,6 +1,6 @@
 export default function Right() {
   return (
-    <div className="md:bg-white gap-4 h-fit rounded-2xl flex flex-col justify-around p-4">
+    <div className="bg-[#afadae]">
       <a
         href="/"
         className="bg-black text-white rounded-full flex items-center h-fit py-3 shadow-sm border-black border-2"
