@@ -7,29 +7,32 @@ export default async function ProjectInfo() {
 
   return (
     <div className="">
-      <div className="flex flex-col gap-8 p-4">
+      <div className="flex flex-col gap-8">
         {projects.map((project) => (
           <div
-            className="bg-gradient-to-r from-slate-100 from-0% py-4 to-white to-45% rounded-md w-full flex flex-col p-4 gap-2 min-h-96"
+            className="border-b-2 border-slate-500 bg-transparent text-white flex w-lvw flex-col p-8 gap-2 min-h-96 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
             key={project._id}
           >
-            <h1 className="font-bold tracking-wider">
+            <h1 className="text-4xl font-bold tracking-wider">
               {project.name.toUpperCase()}
             </h1>
-            <div className="text-gray-800">
+            <div className="text-gray-400">
               <PortableText value={project.content} />
             </div>
 
             <ul>
-              <h1 className="font-bold">Development tools</h1>
+              <h1 className="text-lg font-bold">Development tools</h1>
               {project.list &&
                 project.list.map((listItem, index) => (
-                  <li className="text-gray-800" key={index}>
+                  <li className="text-gray-400" key={index}>
                     + {listItem}
                   </li>
                 ))}
             </ul>
-            <div className="flex mx-auto mt-4">
+            <button className="border-2 py-4 rounded-lg my-10 ">
+              View project
+            </button>
+            <div className="flex mx-auto">
               <Image width={250} height={250} alt={"Alt"} src={project.image} />
             </div>
           </div>
