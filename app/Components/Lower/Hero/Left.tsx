@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import ProfileImage from "../../ProfileImage";
+import ProfileImageTwo from "../../SimpleHero/ProfileImageTwo";
 
 interface Props {
   children: ReactNode;
@@ -10,10 +11,10 @@ export default function Left({ children }: Props) {
       <div className=" md:bg-[#d4d2d3] flex justify-between ">
         <div className="flex px-2 md:px-0 rounded-2xl">{children}</div>
         <div className="flex p-2">
-          <ProfileImage />
+          <ProfileImageTwo />
         </div>
       </div>
-      <div className="px-2 grid grid-cols-2 space-x-2 h-fit">
+      {/* <div className="px-2 grid grid-cols-2 space-x-2 h-fit">
         <div className="">
           <h1>Design</h1>
           <p className="text-sm text-gray-600 leading-tight">
@@ -30,7 +31,7 @@ export default function Left({ children }: Props) {
             performance are the core priorities in my work.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
