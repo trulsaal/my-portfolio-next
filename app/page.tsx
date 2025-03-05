@@ -17,7 +17,7 @@ export default async function Home() {
       <HeroTwo />
       <Hero />
 
-      <section className="bg-slate-900">
+      <section className="bg-gradient-to-b from-slate-900 to-slate-800">
         <WorkHeader></WorkHeader>
         <Project></Project>
       </section>

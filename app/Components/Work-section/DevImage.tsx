@@ -6,14 +6,16 @@ interface Props {
   className?: string;
 }
 
-export default function DevImage({ srcSet, className = "" }: Props) {
+export default function DevImage({ srcSet, className = "md:w-10" }: Props) {
   return (
-    <Image
-      className={className}
-      width={24}
-      height={24}
-      alt={"alt"}
-      src={srcSet}
-    ></Image>
+    <div className="">
+      <Image
+        className={className}
+        width={24}
+        height={24}
+        alt={"alt"}
+        src={srcSet}
+      ></Image>
+    </div>
   );
 }

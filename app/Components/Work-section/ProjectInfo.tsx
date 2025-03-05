@@ -7,33 +7,64 @@ export default async function ProjectInfo() {
 
   return (
     <div className="">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 ">
         {projects.map((project) => (
           <div
-            className="border-b-2 border-slate-500 bg-transparent text-white flex w-lvw flex-col p-8 gap-2 min-h-96 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
+            className="bg-transparent text-white flex md:grid grid-cols-[40%_60%] w-lvw flex-col p-8 md:p-48 gap-4 md:min-h-96 h-lvh "
             key={project._id}
           >
-            <h1 className="text-4xl font-bold tracking-wider">
-              {project.name.toUpperCase()}
-            </h1>
-            <div className="text-gray-400">
-              <PortableText value={project.content} />
+            <div className="md:flex flex flex-col h-full gap-5 md:gap-5 ">
+              <h1 className="md:text-5xl text-2xl font-bold tracking-wider">
+                {project.name.toUpperCase()}
+              </h1>
+              <div className="text-slate-300 text-sm md:text-base">
+                <PortableText value={project.content} />
+              </div>
+
+              <ul className="flex flex-col gap-4 md:gap-5">
+                <h1 className="text-base md:text-lg font-bold">
+                  Development tools
+                </h1>
+                {project.list &&
+                  project.list.map((listItem, index) => (
+                    <li
+                      className="text-slate-200 flex flex-col pl-5 md:text-base text-sm"
+                      key={index}
+                    >
+                      + {listItem}
+                    </li>
+                  ))}
+              </ul>
+              <div className="md:hidden flex m-auto">
+                <Image
+                  width={400}
+                  height={400}
+                  alt={"Alt"}
+                  src={project.image}
+                />
+              </div>
+              <button className="border-2 py-4 rounded-lg w-full md:w-fit md:px-10 md:text-lg">
+                VIEW PROJECT
+              </button>
             </div>
 
-            <ul>
-              <h1 className="text-lg font-bold">Development tools</h1>
-              {project.list &&
-                project.list.map((listItem, index) => (
-                  <li className="text-gray-400" key={index}>
-                    + {listItem}
-                  </li>
-                ))}
-            </ul>
-            <button className="border-2 py-4 rounded-lg my-10 ">
-              View project
-            </button>
-            <div className="flex mx-auto">
-              <Image width={250} height={250} alt={"Alt"} src={project.image} />
+            <div className="hidden md:flex relative m-auto w-fit">
+              <div className="hidden md:flex mx-auto ">
+                <Image
+                  width={1000}
+                  height={800}
+                  alt={"Alt"}
+                  src={project.image}
+                />
+              </div>
+              <div className="absolute z-10 right-0 top-44 w-fit h-96 rounded-lg object-contain">
+                <Image
+                  width={200}
+                  height={800}
+                  alt={"Alt"}
+                  src={project.mobileImage}
+                />
+              </div>
             </div>
           </div>
         ))}

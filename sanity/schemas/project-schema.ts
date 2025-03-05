@@ -16,6 +16,13 @@ const project = {
       options: { hotspot: true },
       fields: [{ name: "alt", title: "Alt", type: "string" }],
     },
+    {
+      name: "mobileImage",
+      title: "Mobile Image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [{ name: "alt", title: "Alt", type: "string" }],
+    },
     { name: "url", title: "URL", type: "url" },
     {
       name: "content",
