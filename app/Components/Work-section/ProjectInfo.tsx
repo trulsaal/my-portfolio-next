@@ -1,24 +1,27 @@
 import { getProjects } from "@/sanity/sanity-util";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function ProjectInfo() {
   const projects = await getProjects();
 
   return (
     <div className="">
-      <div className="flex flex-col gap-8 ">
+      <div className="flex flex-col ">
         {projects.map((project) => (
           <div
-            className="bg-transparent text-white flex md:grid grid-cols-[40%_60%] w-lvw flex-col p-8 md:p-48 gap-4 md:min-h-96 h-lvh "
+            className="text-white flex md:grid grid-cols-[40%_60%] flex-col px-5 pt-8  md:p-48 md:min-h-96 h-full md:h-lvh "
             key={project._id}
           >
-            <div className="md:flex flex flex-col h-full gap-5 md:gap-5 ">
-              <h1 className="md:text-5xl text-2xl font-bold tracking-wider">
-                {project.name.toUpperCase()}
-              </h1>
-              <div className="text-slate-300 text-sm md:text-base">
-                <PortableText value={project.content} />
+            <div className="md:flex flex flex-col h-full border-b md:border-none border-slate-700 gap-5 md:gap-5 ">
+              <div>
+                <h1 className="md:text-5xl text-2xl font-bold tracking-wider mb-1">
+                  {project.name.toUpperCase()}
+                </h1>
+                <div className="text-slate-300 text-sm md:text-base">
+                  <PortableText value={project.content} />
+                </div>
               </div>
 
               <ul className="flex flex-col gap-4 md:gap-5">
@@ -43,9 +46,12 @@ export default async function ProjectInfo() {
                   src={project.image}
                 />
               </div>
-              <button className="border-2 py-4 rounded-lg w-full md:w-fit md:px-10 md:text-lg">
+              <Link
+                href={project.url}
+                className="hover:bg-slate-900 hover:border-slate-800 transition-all duration-150 border-2 py-4 flex justify-center rounded-lg w-full md:w-fit md:px-10 md:text-lg mb-8"
+              >
                 VIEW PROJECT
-              </button>
+              </Link>
             </div>
 
             <div className="hidden md:flex relative m-auto w-fit">

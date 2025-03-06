@@ -4,7 +4,7 @@ import ProfileImageTwo from "./ProfileImageTwo";
 
 export default function HeroTwo() {
   return (
-    <div className="md:hidden flex flex-col h-[40rem] px-2 pt-4 justify-between">
+    <div className="md:hidden flex flex-col h-lvh px-2 pt-4 justify-between">
       <div className=" grid grid-cols-2 w-full md:px-16 md:mb-4 h-fit relative md:pt-[68px]">
         <div className="flex flex-col md:gap-4 w-full">
           <p className=" text-slate-800 text-lg md:text-[34px]">hi, im</p>

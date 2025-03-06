@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply h-[4000px];
-}
-
-.container {
-  @apply h-fit;
+html {
+  @apply scroll-smooth;
 }
