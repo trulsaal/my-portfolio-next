@@ -1,4 +1,5 @@
-import Container from "./Components/Container";
+export const revalidate = 0;
+
 import Header from "./Components/Upper/Header";
 
 import { Outfit } from "next/font/google";

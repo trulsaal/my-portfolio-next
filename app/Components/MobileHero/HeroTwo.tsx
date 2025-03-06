@@ -1,13 +1,3 @@
-import {
-  FaGit,
-  FaJsSquare,
-  FaGithub,
-  FaHtml5,
-  FaCss3,
-  FaFigma,
-  FaReact,
-  FaNodeJs,
-} from "react-icons/fa";
 import Top from "./Top";
 import Middle from "./Middle";
 import ProfileImageTwo from "./ProfileImageTwo";
@@ -22,16 +12,6 @@ export default function HeroTwo() {
             truls
           </p>
         </div>
-        {/* <div className="mb-1 flex bottom-0 right-0 md:right-0 md:pr-16 md:bottom-[18px] absolute md:justify-end gap-1 px-2 md:gap-2 text-xl md:text-4xl text-[#afadae] opacity-50 md:opacity-100">
-          <FaJsSquare />
-          <FaGithub />
-          <FaGit />
-          <FaHtml5 />
-          <FaCss3 />
-          <FaReact />
-          <FaNodeJs />
-          <FaFigma />
-        </div> */}
       </div>
       <Top></Top>
       <Middle></Middle>
