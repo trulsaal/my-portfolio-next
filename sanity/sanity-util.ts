@@ -1,3 +1,4 @@
+import { ProfileImage } from "@/Types/ProfileImage";
 import { Project } from "@/Types/Project";
 import { createClient, groq } from "next-sanity";
 
@@ -28,15 +29,14 @@ export async function getProfileImage() {
     dataset: "production",
     apiVersion: "2025-02-19",
   });
+
   return client.fetch(
-    groq`*[_type == "profileImage"]{
-    _id,
-    _createdAt,
-    name,
-    "slug": slug.current,
-    "image": image.asset->url
-  
-  
+    groq`*[_type == "profileImage"] | order(_createdAt desc) [0] {
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
+      "image": image.asset->url
     }`
   );
 }

@@ -26,7 +26,7 @@ export default async function ProjectInfo() {
                   Development tools
                 </h1>
                 {project.list &&
-                  project.list.map((listItem, index) => (
+                  project.list.map((listItem: string, index: number) => (
                     <li
                       className="text-slate-200 flex flex-col pl-5 md:text-base text-sm"
                       key={index}

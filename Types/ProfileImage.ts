@@ -4,4 +4,5 @@ export type ProfileImage = {
   name: string;
   slug: string;
   image: string;
+  alt: string;
 };

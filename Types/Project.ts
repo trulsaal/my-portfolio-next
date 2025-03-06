@@ -9,5 +9,5 @@ export type Project = {
   mobileImage: string;
   url: string;
   content: PortableTextBlock;
-  list: string;
+  list: [];
 };
