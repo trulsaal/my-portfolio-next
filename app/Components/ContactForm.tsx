@@ -33,31 +33,31 @@ export default function ContactForm() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="flex flex-col space-y-4 p-4 bg-white rounded-xl shadow-xl"
+      className="flex flex-col space-y-4 p-4 bg-none rounded-xl "
     >
       <input
         type="text"
         name="from_name"
         placeholder="Ditt navn"
         required
-        className="p-2 border rounded"
+        className="p-2 border rounded shadow-sm"
       />
       <input
         type="email"
         name="from_email"
         placeholder="Din e-post"
         required
-        className="p-2 border rounded"
+        className="p-2 border rounded shadow-sm"
       />
       <textarea
         name="message"
         placeholder="Din melding"
         required
-        className="p-2 border rounded"
+        className="p-2 border rounded shadow-sm"
       />
       <button
         type="submit"
-        className="bg-slate-800 text-white p-2 rounded hover:bg-slate-700"
+        className="bg-slate-800 text-white p-2 rounded hover:bg-slate-700 shadow-sm"
       >
         Send
       </button>
