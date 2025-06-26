@@ -46,12 +46,21 @@ export default async function ProjectInfo() {
                   src={project.image}
                 />
               </div>
-              <Link
-                href={project.url}
-                className="hover:bg-slate-900 hover:border-slate-800 transition-all duration-150 border-2 py-4 flex justify-center rounded-lg w-full md:w-fit md:px-10 md:text-lg mb-8"
-              >
-                VIEW PROJECT
-              </Link>
+              {project.downloadUrl ? (
+                <Link
+                  href={project.downloadUrl}
+                  className="hover:bg-green-700 hover:border-green-800 transition-all duration-150 border-2 py-4 flex justify-center rounded-lg w-full md:w-fit md:px-10 md:text-lg mb-8"
+                >
+                  DOWNLOAD
+                </Link>
+              ) : project.url ? (
+                <Link
+                  href={project.url}
+                  className="hover:bg-slate-900 hover:border-slate-800 transition-all duration-150 border-2 py-4 flex justify-center rounded-lg w-full md:w-fit md:px-10 md:text-lg mb-8"
+                >
+                  VIEW PROJECT
+                </Link>
+              ) : null}
             </div>
 
             <div className="hidden md:flex relative m-auto w-fit">

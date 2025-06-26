@@ -10,4 +10,6 @@ export type Project = {
   url: string;
   content: PortableTextBlock;
   list: [];
+  downloadUrl?: string;
+  alt?: string;
 };

@@ -25,6 +25,11 @@ const project = {
     },
     { name: "url", title: "URL", type: "url" },
     {
+      name: "downloadUrl",
+      title: "Download URL",
+      type: "url",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",
