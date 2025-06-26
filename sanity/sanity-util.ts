@@ -1,4 +1,3 @@
-import { ProfileImage } from "@/Types/ProfileImage";
 import { Project } from "@/Types/Project";
 import { createClient, groq } from "next-sanity";
 
