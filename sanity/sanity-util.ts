@@ -56,6 +56,7 @@ export async function getProject(slug: string): Promise<Project> {
     "image": image.asset->url,
     "mobileImage": mobileImage.asset->url,
     url,
+    downloadUrl,
     content,
     list
   
