@@ -1,41 +1,19 @@
 import Image from "next/image";
-import { getProfileImage } from "@/sanity/sanity-util";
+import profilImage from "@/public/profilbilde.png";
 
-interface ProfileImage {
-  _id: string;
-  _createdAt: string;
-  name: string;
-  slug: string;
-  image: string;
-  alt?: string;
-}
 
-export default async function ProfileImageComponent() {
-  const profileImage: ProfileImage = await getProfileImage();
+export default function ProfileImageComponent() {
 
   return (
     <div>
       <Image
         className="overflow-hidden"
-        src={profileImage.image}
+        src={profilImage}
         width={550}
         height={500}
-        alt={profileImage.alt || "Profile Image"}
+        alt= "Profile Image"
       />
     </div>
   );
 }
 
-{
-  /* {profileImage.map((profileImage: Props) => (
-        <div key={profileImage._id} className="">
-          <Image
-            className="overflow-hidden"
-            src={profileImage.image}
-            width={550}
-            height={500}
-            alt={profileImage.alt}
-          />
-        </div>
-      ))} */
-}

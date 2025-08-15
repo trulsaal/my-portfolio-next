@@ -20,7 +20,7 @@ export default function WorkHeader() {
           <DevImage srcSet="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
           <DevImage srcSet="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
 
-          <DevImage srcSet="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sanity/sanity-original.svg" />
+          <DevImage srcSet="/profilbilde.png" />
 
           {/* <DevImage srcSet="https://img.icons8.com/?size=100&id=YSWCDCSF4H3N&format=png&color=FFFFFF" /> */}
           <DevImage srcSet="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
